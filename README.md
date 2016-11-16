@@ -1,10 +1,11 @@
 # iflux2-starter
 
 iflux2的快速项目构建的基础项目
+
 配合iflux2-scaffold 可以快速的创建iflux2的项目
 
 
-# iflux2-scaffold
+# [iflux2-scaffold](https://github.com/brothers-js/iflux2-scaffold)
 
 > 工欲善其事 必先利其器
 
