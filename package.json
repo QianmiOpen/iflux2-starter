@@ -24,8 +24,8 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "iflux2": "1.2.5",
-    "react": "15.3.2",
-    "react-dom": "15.3.2",
+    "react": "15.4.0",
+    "react-dom": "15.4.0",
     "whatwg-fetch": "2.0.0"
   },
   "devDependencies": {
