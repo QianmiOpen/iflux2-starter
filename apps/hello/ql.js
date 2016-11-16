@@ -1,7 +1,7 @@
 import {QL} from 'iflux2'
 
-//query lang
-export const helloQL = QL('helloQL', [
-  'msg',
-  (msg) => `${msg} from ql`
+
+export const textQL = QL('helloQL', [
+  'text',
+  (text) => `${text} from ql`
 ])
