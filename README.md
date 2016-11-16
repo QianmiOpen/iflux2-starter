@@ -62,5 +62,10 @@ npm install -g yarn
   #create app
   cd hello
   iflux2 newapp blog
+
+  #start project
+  yarn start # npm start 
+
+  # http://localhost:3000
  ```
 
