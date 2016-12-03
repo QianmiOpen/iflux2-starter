@@ -1,5 +1,5 @@
 {
-  "name": "iflux2-boot",
+  "name": "iflux2-starter",
   "version": "1.0.0",
   "description": "a baisc bootstrap project for iflux2",
   "main": "index.js",
@@ -23,9 +23,9 @@
   "license": "BSD",
   "dependencies": {
     "classnames": "^2.2.5",
-    "iflux2": "1.2.5",
-    "react": "15.4.0",
-    "react-dom": "15.4.0",
+    "iflux2": "1.2.6",
+    "react": "15.4.1",
+    "react-dom": "15.4.1",
     "whatwg-fetch": "2.0.0"
   },
   "devDependencies": {
