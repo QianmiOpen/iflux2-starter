@@ -9,7 +9,8 @@
     "transform-es2015-modules-commonjs",
     "transform-class-properties",
     "transform-flow-strip-types",
-    "transform-runtime"
+    "transform-runtime",
+    "syntax-trailing-function-commas"
   ],
   "env": {
     "production": {
