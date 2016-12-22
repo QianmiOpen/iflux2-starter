@@ -7,7 +7,7 @@
     "test": "jest --verbose",
     "start": "./node_modules/.bin/webpack-dev-server --port 3000",
     "clean": "rm -rf ./dist",
-    "build:dll": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.dll.config.js",
+    "build:dll": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.dll.config.js --progress --color",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.production.js --progress --color",
     "build:all": "NODE_ENV=production npm run clean && npm run build:dll && npm run build"
   },
