@@ -1,3 +1,4 @@
+//@flow
 import {Actor, Action} from 'iflux2'
 
 export default class LoadingActor extends  Actor {
@@ -8,7 +9,7 @@ export default class LoadingActor extends  Actor {
   }
 
   @Action('loading')
-  setLoding(state, status) {
+  setLoding(state: Object, status: boolean) {
     return state.set('loading', status);
   }
 }

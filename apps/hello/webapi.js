@@ -1,8 +1,6 @@
 /**
  * @flow
  */
-import 'fetch'
-
 export const fetchText = () => {
   return new Promise(resolve => {
     //稍微延时一下

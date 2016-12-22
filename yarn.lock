@@ -1812,9 +1812,9 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-iflux2@1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/iflux2/-/iflux2-1.2.6.tgz#afdb4e95539f8ccb904df99e519fdc8d525e19f4"
+iflux2@1.2.7:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/iflux2/-/iflux2-1.2.7.tgz#a258e4c7008fff666b3db1ab4562be920359ba98"
   dependencies:
     events "^1.1.0"
     immutable "^3.8.1"

@@ -1,5 +1,5 @@
-import {Action, Actor} from 'iflux2'
-
+//@flow
+import {Actor, Action} from 'iflux2'
 
 export default class HelloActor extends Actor {
   defaultState() {
@@ -9,7 +9,7 @@ export default class HelloActor extends Actor {
   }
 
   @Action('update')
-  update(state, {message}) {
+  update(state: Object, {message}: {message: string}) {
     return state.set('text', message)
   }
 }

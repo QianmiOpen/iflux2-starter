@@ -1,3 +1,4 @@
+//@flow
 import React, {Component} from 'react'
 import {Relax} from 'iflux2'
 import Message from './message'
@@ -12,8 +13,8 @@ export default class HelloContainer extends Component {
 
   render() {
     const {loading} = this.props;
-    return (loading 
-      ? <Loading/> 
+    return (loading
+      ? <Loading/>
       : <Message/>
     );
   }

@@ -1,12 +1,16 @@
+//@flow
 import {Store} from 'iflux2'
 import {fetchText} from './webapi'
 import HelloActor from './actor/hello-actor'
 import LoadingActor from './actor/loading-actor'
 
+type Props = {
+  debug: boolean;
+};
 
 export default class AppStore extends Store {
 
-  constructor(props) {
+  constructor(props: Props = {debug: false}) {
     super(props)
     if (__DEV__) {
       window._store = this;
@@ -21,7 +25,7 @@ export default class AppStore extends Store {
     ]
   }
 
-  
+
   //;;;;;;;;;;;;;;;action;;;;;;;;;;;;;;;
   init = async () => {
     const {res: message, err} = await fetchText()
@@ -32,4 +36,3 @@ export default class AppStore extends Store {
     this.dispatch('update', {message})
   };
 }
-

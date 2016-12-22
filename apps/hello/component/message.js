@@ -1,5 +1,6 @@
+//@flow
 import React, {Component} from 'react'
-import {Relax} from 'iflux2' 
+import {Relax} from 'iflux2'
 import {textQL} from '../ql'
 
 @Relax
