@@ -4,19 +4,16 @@ import {fetchText} from './webapi'
 import HelloActor from './actor/hello-actor'
 import LoadingActor from './actor/loading-actor'
 
-type Props = {
-  debug: boolean;
-};
+import type {StoreOptions} from 'iflux2'
 
 export default class AppStore extends Store {
 
-  constructor(props: Props = {debug: false}) {
+  constructor(props: StoreOptions = {debug: false}) {
     super(props)
     if (__DEV__) {
       window._store = this;
     }
   }
-
 
   bindActor() {
     return [
@@ -24,7 +21,6 @@ export default class AppStore extends Store {
       new HelloActor
     ]
   }
-
 
   //;;;;;;;;;;;;;;;action;;;;;;;;;;;;;;;
   init = async () => {

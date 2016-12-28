@@ -10,12 +10,13 @@ export default class HelloContainer extends Component {
     loading: false
   };
 
-
   render() {
     const {loading} = this.props;
-    return (loading
-      ? <Loading/>
-      : <Message/>
+
+    return (
+      loading
+        ? <Loading/>
+        : <Message/>
     );
   }
 }

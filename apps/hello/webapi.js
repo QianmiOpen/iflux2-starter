@@ -1,7 +1,7 @@
 /**
  * @flow
  */
-export const fetchText = () => {
+export const fetchText = (): Promise<{err: ?Error, res: any}> => {
   return new Promise(resolve => {
     //稍微延时一下
     setTimeout(() => {

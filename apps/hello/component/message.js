@@ -12,11 +12,11 @@ export default class Message extends Component {
 
   render() {
     const {text, textQL} = this.props
-    console.log(text, textQL);
 
     return (
       <div>
         <div>{ text }</div>
+        <div>{ textQL }</div>
       </div>
     )
   }
