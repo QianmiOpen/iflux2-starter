@@ -31,4 +31,12 @@ export default class AppStore extends Store {
     this.dispatch('loading', false)
     this.dispatch('update', {message})
   };
+
+
+  reduxAction = () => {
+    this.dispatch({
+      type: 'redux:action',
+      message: 'hello text from redux action'
+    });
+  };
 }
