@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: './index.js',
   output: {
-    path: './build',
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -18,16 +18,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js/, exclude: /node_modules/, loader: 'babel-loader?cacheDirectory'}
+      { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader?cacheDirectory' }
     ]
   },
   plugins: [
-     new webpack.DefinePlugin({
+    new webpack.DefinePlugin({
       __DEV__: true
     }),
     new HtmlWebpackPlugin({
       dev: true,
-      favicon:'./favicon.ico',
+      favicon: './favicon.ico',
       filename: 'index.html',
       template: './index.ejs'
     })

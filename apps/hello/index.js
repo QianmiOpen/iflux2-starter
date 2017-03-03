@@ -1,10 +1,10 @@
 //@flow
-import React, {Component} from 'react'
-import {StoreProvider} from 'iflux2'
+import React, { Component } from 'react'
+import { StoreProvider } from 'iflux2'
 import AppStore from './store'
 import HelloContainer from './component/hello-container'
 
-@StoreProvider(AppStore, {debug: true})
+@StoreProvider(AppStore, { debug: __DEV__ })
 export default class HelloApp extends Component {
   componentDidMount() {
     this.props.store.init()
@@ -12,7 +12,7 @@ export default class HelloApp extends Component {
 
   render() {
     return (
-      <HelloContainer/>
+      <HelloContainer />
     )
   }
 }

@@ -1,14 +1,14 @@
 //@flow
-import {Store} from 'iflux2'
-import {fetchText} from './webapi'
+import { Store } from 'iflux2'
+import { fetchText } from './webapi'
 import HelloActor from './actor/hello-actor'
 import LoadingActor from './actor/loading-actor'
 
-import type {StoreOptions} from 'iflux2'
+import type {StoreOptions } from 'iflux2'
 
 export default class AppStore extends Store {
 
-  constructor(props: StoreOptions = {debug: false}) {
+  constructor(props: StoreOptions) {
     super(props)
     if (__DEV__) {
       window._store = this;
@@ -27,9 +27,13 @@ export default class AppStore extends Store {
     const {res: message, err} = await fetchText()
     if (err) {
       console.error(err.message);
+      return;
     }
-    this.dispatch('loading', false)
-    this.dispatch('update', {message})
+
+    this.transaction(() => {
+      this.dispatch('loading', false)
+      this.dispatch('update', { message })
+    })
   };
 
 

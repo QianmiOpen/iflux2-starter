@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './index.js',
   output: {
-    path: './dist',
+    path: path.resolve(__dirname, './dist'),
     filename: 'bundle-[chunkhash].js',
     chunkFilename: '[id]-bundle-[chunkhash].js'
   },
@@ -15,7 +15,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js/, exclude: /node_modules/, loader: 'babel-loader?cacheDirectory'}
+      { test: /\.js/, exclude: /node_modules/, loader: 'babel-loader?cacheDirectory' }
     ]
   },
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       dev: false,
-      favicon:'./favicon.ico',
+      favicon: './favicon.ico',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
